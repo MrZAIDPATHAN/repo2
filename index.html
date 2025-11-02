@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supercar Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">🚗 SH</div>
+      <h2>Supercar Hub</h2>
+      <nav>
+        <button>Spot Feed</button>
+        <button>Compare Cars</button>
+        <button>Virtual Garage</button>
+        <button>Add Spot</button>
+        <button>Settings</button>
+      </nav>
+      <div class="filters">
+        <span>Ferrari</span><span>Lamborghini</span><span>McLaren</span><span>Porsche</span>
+      </div>
+      <p class="about">Local-first supercar community. Upload sightings, compare specs, and build your dream garage.</p>
+    </aside>
+
+    <!-- Feed -->
+    <main class="feed">
+      <div class="post">
+        <div class="post-header"><span class="avatar">RH</span><b>Ravi • 1h</b></div>
+        <p>Spotted this beauty near Bandra — sounds heavenly!</p>
+        <img src="assets/ferrari.jpg" alt="Ferrari">
+        <div class="post-footer">
+          <button>Profile</button><button class="accent">View Spot</button>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post-header"><span class="avatar">A</span><b>Aisha • 2h</b></div>
+        <p>Huracan doing a photoshoot @Mumbai</p>
+        <img src="assets/lamborghini.jpg" alt="Lambo">
+      </div>
+    </main>
+
+    <!-- Right Panel -->
+    <aside class="right-panel">
+      <h3>Compare Cars</h3>
+      <ul class="compare-list">
+        <li><img src="assets/ferrari.jpg"><span>Ferrari F8</span><button>Select</button></li>
+        <li><img src="assets/lamborghini.jpg"><span>Lamborghini EVO</span><button>Select</button></li>
+      </ul>
+
+      <h3>Your Garage</h3>
+      <p>Empty — Add cars</p>
+
+      <h3>Spot Map</h3>
+      <div id="map"></div>
+    </aside>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
