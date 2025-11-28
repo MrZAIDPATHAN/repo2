@@ -40,20 +40,18 @@ const LeftSidebar = () => {
         } else if (textType === "Create") {
             setOpen(true);
         } else if (textType === "Profile") {
-            navigate(`/profile/${user?._id}`);
+            navigate(`/profile/${user._id}`);
         } else if (textType === "Home") {
             navigate("/");
-        } else if (textType === 'Messages') {
-            navigate("/chat");
-        }
+        } else if (textType === "Compare") {
+            navigate('/compare-cars');
+        } 
     }
 
     const sidebarItems = [
         { icon: <Home />, text: "Home" },
         { icon: <Search />, text: "Search" },
-        { icon: <TrendingUp />, text: "Explore" },
-        { icon: <MessageCircle />, text: "Messages" },
-        { icon: <Heart />, text: "Notifications" },
+        { icon: <Heart />, text: "Compare" },
         { icon: <PlusSquare />, text: "Create" },
         {
             icon: (

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import ChatPage from './components/ChatPage'
 import EditProfile from './components/EditProfile'
 import Home from './components/Home'
+import ControlCars from './components/ControlCars'
 import Login from './components/Login'
 import MainLayout from './components/MainLayout'
 import Profile from './components/Profile'
@@ -36,7 +37,13 @@ const browserRouter = createBrowserRouter([
         path: '/chat',
         element: <ProtectedRoutes><ChatPage /></ProtectedRoutes>
       },
+      // other children stay inside MainLayout (with sidebars)
     ]
+  },
+  // Full-page compare view: outside MainLayout so it takes the whole page
+  {
+    path: '/compare-cars',
+    element: <ProtectedRoutes><ControlCars /></ProtectedRoutes>
   },
   {
     path: '/login',
